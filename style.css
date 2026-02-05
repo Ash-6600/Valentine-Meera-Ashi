@@ -1,0 +1,326 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif; /* Fallback font family */
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margin */
+    background-color: #FADADD; /* Set background color to light pink */
+}
+
+#container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center-align items vertically */
+    height: 100vh; /* Make the container full viewport height */
+}
+
+#image-container {
+    /* This container will hold the images */
+}
+
+#question {
+    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
+    font-size: 52px; /* Set font size for the question */
+}
+
+#options {
+    margin-top: 20px; /* Add space above the options */
+}
+
+button {
+    padding: 10px 20px; /* Set padding for buttons */
+    margin: 0 10px; /* Set margin around buttons */
+    font-size: 26px; /* Set font size for buttons */
+    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
+    background-color: #FB607F; /* Set button background color */
+    color: white; /* Set text color to white */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+#question {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+#image-container {
+    width: 100%;
+    max-width: 1200px;   /* adjust as you like */
+    height: 1300px;      /* optional */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .love-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.love-nav {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.love-nav a {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.love-nav a:hover {
+    background: white;
+    color: #ff5f8f;
+    transform: translateY(-3px);
+}
+
+/* ---------- PHOTOS PAGE ---------- */
+
+.photos-page {
+    background: linear-gradient(to top right, #d077dd, #dcafe5);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+}
+
+.photos-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.photos-header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Gallery grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Photo card */
+.photo-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Text info */
+.photo-info {
+    padding: 18px;
+}
+
+.photo-info h3 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.quote {
+    font-style: italic;
+    opacity: 0.9;
+    margin: 10px 0;
+}
+
+.photo-info span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .photos-header h1 {
+        font-size: 3rem;
+    }
+    .gallery {
+        padding: 20px;
+    }
+}
+
+/* ---------- IMAGE MODAL ---------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+/* Make images feel clickable */
+.gallery-img {
+    cursor: pointer;
+}
+
+/* ---------- GIFTS PAGE ---------- */
+
+.gifts-page {
+    background: linear-gradient(to top right, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.gift-card {
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.gift-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.gift-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* LETTER POPUP */
+
+.letter-box {
+    background: white;
+    color: #444;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem;
+    position: relative;
+    animation: zoomIn 0.3s ease;
+}
+
+#letterContent {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+

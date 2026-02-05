@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #FADADD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif; /* default */
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive; /* romantic font */
+    font-size: 4rem;
+    color: rgb(140, 34, 34);
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.heart {
+            position: absolute;
+            color: rgba(255,255,255,0.8);
+            font-size: 20px;
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+
+<h1>Meera 🥹<br>Thank you so much</h1>
+
+<script>
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 5000);
+    }, 300);
+</script>
+<header>
+<nav class="love-nav">
+    <a href="index.html">Want to say yes again 💕</a>
+    <a href="Photos.html">Want to see our photos 📸</a>
+    <a href="Gifts.html">Want to see the gifts 🎁</a>
+</nav>
+    </header>
+
+</body>
+</html>

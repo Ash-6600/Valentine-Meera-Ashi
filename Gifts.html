@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts 🎁</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gifts-page">
+
+<header class="photos-header">
+    <nav class="love-nav">
+        <a href="index.html">Want to say yes again 💕</a>
+        <a href="Photos.html">Want to see our photos 📸</a>
+    </nav>
+    <h1>Gifts For You 🎁</h1>
+    <p class="subtitle">Each one carries a piece of my heart</p>
+</header>
+
+<section class="gift-container">
+
+    <div class="gift-card" onclick="openLetter('gift1')">
+        🎁
+        <p>First Surprise</p>
+    </div>
+
+    <div class="gift-card" onclick="openLetter('gift2')">
+        💝
+        <p>Something Special</p>
+    </div>
+
+    <div class="gift-card" onclick="openLetter('gift3')">
+        💌
+        <p>A Letter For You</p>
+    </div>
+
+</section>
+
+<!-- POPUP LETTER -->
+
+<div id="letterModal" class="modal">
+    <div class="letter-box">
+        <span class="close">&times;</span>
+        <div id="letterContent"></div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
